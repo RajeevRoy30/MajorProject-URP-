@@ -16006,7 +16006,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04243035, y: 0.09066108, z: -0.0038662285, w: 0.99497}
+  m_LocalRotation: {x: 0.041904084, y: 0.18062213, z: -0.0077026044, w: 0.98262936}
   m_LocalPosition: {x: 0, y: 1.72, z: -1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16060,6 +16060,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 0}
+  isGlobal: 0
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!114 &534669908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16072,6 +16077,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 0}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 0}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!114 &534669909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16718,7 +16771,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094322994}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.024373159, y: 0.09071629, z: -0.0022208677, w: 0.995576}
+  m_LocalRotation: {x: 0.024070853, y: 0.18073213, z: -0.0044245864, w: 0.9832278}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -19215,6 +19268,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 995469431}
     m_Modifications:
+    - target: {fileID: 437002810306929161, guid: 099fe2440fe8d7044b2f9b6aa5073f95,
+        type: 3}
+      propertyPath: m_TagString
+      value: Breakable
+      objectReference: {fileID: 0}
     - target: {fileID: 437002810306929179, guid: 099fe2440fe8d7044b2f9b6aa5073f95,
         type: 3}
       propertyPath: m_Name
@@ -19811,7 +19869,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1585397924}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04243034, y: 0.09066106, z: -0.0038662266, w: 0.99497}
+  m_LocalRotation: {x: 0.041904077, y: 0.1806221, z: -0.0077026025, w: 0.98262936}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -25808,7 +25866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924318183}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.060521316, y: 0.09057575, z: -0.005514666, w: 0.99403363}
+  m_LocalRotation: {x: 0.059770696, y: 0.18045212, z: -0.010986757, w: 0.98170453}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

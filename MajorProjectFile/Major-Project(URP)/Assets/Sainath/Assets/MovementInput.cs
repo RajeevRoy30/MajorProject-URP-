@@ -154,10 +154,14 @@ public class MovementInput : MonoBehaviour
 
     private float verticalVel;
     private Vector3 moveVector;
+    private Rigidbody rb;
+    private float gravity = -9.81f;
+    [SerializeField] private int mass;
 
     // Initialization
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
         cam = Camera.main;
         controller = GetComponent<CharacterController>();
@@ -194,11 +198,25 @@ public class MovementInput : MonoBehaviour
         if (GetComponent<ThrowController>()?.aiming == true)
             return;
 
+
+        //if (controller.isGrounded && desiredMoveDirection.y < 0)
+        //{
+        //    rb.AddForce(new Vector3(0, -2, 0));
+        //    //desiredMoveDirection.y = -2f; // Keeps player "stuck" to ground
+        //}
+        if(!controller.isGrounded)
+        {
+            rb.AddForce(new Vector3 (0,gravity*mass,0)*Time.deltaTime);
+           //desiredMoveDirection.y += gravity * mass * Time.deltaTime;
+        }
+
+
         if (!blockRotationPlayer)
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), desiredRotationSpeed);
             controller.Move(desiredMoveDirection * Time.deltaTime * currentSpeed);
         }
+
     }
 
     public void RotateToCamera(Transform t)
@@ -229,4 +247,5 @@ public class MovementInput : MonoBehaviour
             anim.SetFloat("InputMagnitude", Speed, StopAnimTime, Time.deltaTime);
         }
     }
+
 }
