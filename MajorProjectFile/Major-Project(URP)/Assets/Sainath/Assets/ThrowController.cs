@@ -6,6 +6,7 @@ using DG.Tweening;
 using UnityEngine.UI;
 using Cinemachine;
 
+
 [RequireComponent(typeof(Animator))]
 public class ThrowController : MonoBehaviour
 {
@@ -61,6 +62,7 @@ public class ThrowController : MonoBehaviour
         origLocPos = weapon.localPosition;
         origLocRot = weapon.localEulerAngles;
         reticle.DOFade(0, 0);
+
 
     }
 
@@ -141,7 +143,7 @@ public class ThrowController : MonoBehaviour
 
         //UI
         float fade = state ? 1 : 0;
-        reticle.DOFade(fade, .2f);
+        reticle.DOFade(fade,0.2f);
 
         if (!changeCamera)
             return;
