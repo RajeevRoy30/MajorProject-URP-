@@ -4,41 +4,39 @@ using UnityEngine;
 
 public class WeaponScript : MonoBehaviour
 {
-
     public bool activated;
-
     public float rotationSpeed;
+    [SerializeField] private LayerMask layerMask;
 
     void Update()
     {
-
         if (activated)
         {
             transform.localEulerAngles += Vector3.forward * rotationSpeed * Time.deltaTime;
         }
-
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == 11)
+        if (((1 << collision.gameObject.layer) & layerMask) != 0)
         {
             print(collision.gameObject.name);
-            GetComponent<Rigidbody>().Sleep();
-            GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
-            GetComponent<Rigidbody>().isKinematic = true;
+            Rigidbody rb = GetComponent<Rigidbody>();
+            rb.Sleep();
+            rb.collisionDetectionMode = CollisionDetectionMode.ContinuousSpeculative;
+            rb.isKinematic = true;
             activated = false;
         }
-
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Breakable"))
         {
-            if(other.GetComponent<BreakBoxScript>() != null)
+            BreakBoxScript breakScript = other.GetComponent<BreakBoxScript>();
+            if (breakScript != null)
             {
-                other.GetComponent<BreakBoxScript>().Break();
+                breakScript.Break();
             }
         }
     }

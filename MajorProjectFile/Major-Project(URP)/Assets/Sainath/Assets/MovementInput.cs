@@ -578,13 +578,13 @@ public class MovementInput : MonoBehaviour
     private float currentSpeed;
 
     [Header("Gravity Settings")]
-    public float gravity = -9.81f;
+  //  public float gravity = -9.81f;
     public float groundedCheckRadius = 0.3f;
     public LayerMask groundLayers;
     public Transform groundCheck;
 
-    private float verticalVel;
-    private Vector3 moveVector;
+    //private float verticalVel;
+   // private Vector3 moveVector;
 
     [Header("Animation Smoothing")]
     [Range(0, 1f)]
@@ -596,7 +596,7 @@ public class MovementInput : MonoBehaviour
     [Range(0, 1f)]
     public float StopAnimTime = 0.15f;
 
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
     private float verticalVel;
     private Vector3 moveVector;
     private Rigidbody rb;
@@ -604,8 +604,8 @@ public class MovementInput : MonoBehaviour
     [SerializeField] private int mass;
 
     // Initialization
-=======
->>>>>>> Stashed changes
+//=======
+//>>>>>>> Stashed changes
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -656,7 +656,7 @@ public class MovementInput : MonoBehaviour
         if (GetComponent<ThrowController>()?.aiming == true)
             return;
 
-<<<<<<< Updated upstream
+//<<<<<<< Updated upstream
 
         //if (controller.isGrounded && desiredMoveDirection.y < 0)
         //{
@@ -671,20 +671,20 @@ public class MovementInput : MonoBehaviour
 
 
         if (!blockRotationPlayer)
-=======
+//=======
         if (!blockRotationPlayer && desiredMoveDirection != Vector3.zero)
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
         {
             transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), desiredRotationSpeed);
         }
 
-<<<<<<< Updated upstream
-=======
+//<<<<<<< Updated upstream
+//=======
         moveVector = desiredMoveDirection * currentSpeed;
         moveVector.y = verticalVel;
 
         controller.Move(moveVector * Time.deltaTime);
->>>>>>> Stashed changes
+//>>>>>>> Stashed changes
     }
 
     public void RotateToCamera(Transform t)
