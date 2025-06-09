@@ -16,7 +16,7 @@ public class AttackScript : MonoBehaviour
         {
             if (collider.transform.TryGetComponent(out HealthSystem healthSystem))
             {
-                healthSystem.TakeDamage(8);
+                healthSystem.TakeDamage(attackDamage);
             }
         }
     }

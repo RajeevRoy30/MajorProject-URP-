@@ -18,7 +18,7 @@ public class BossAttacks : MonoBehaviour
     public BoxCollider leftFootCollider; // pe esquerdo para o chute
     public Transform spellPosition; // mao esquerda, posicao da spell
     public Transform impactPosition; // onde sera spawnado o golpe de impacto
-    private Animator playerAnim; // referencia ao animator do player, pega no start
+    public Animator playerAnim; // referencia ao animator do player, pega no start
     public DamageDealer greatSword; // script que controla o dano da GreatSword
     public CameraShaker shaker; // script na camera que treme a tela
     public GameManagerScript gameManager; // usado para pegar a booleana master
@@ -67,7 +67,7 @@ public class BossAttacks : MonoBehaviour
     private void Start()
     {
         anim = model.GetComponent<Animator>();
-        playerAnim = player.GetComponent<Animator>();
+       // playerAnim = player.GetComponent<Animator>();
 
         Vector3 size = new Vector3(0.00075f, 0.0004f, 0.014f); // tamanho da GreatSword
         Vector3 center = new Vector3(0f, 0f, 0.007f);

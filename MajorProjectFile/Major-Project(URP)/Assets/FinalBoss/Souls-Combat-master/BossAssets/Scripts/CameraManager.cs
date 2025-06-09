@@ -26,8 +26,8 @@ public class CameraManager : MonoBehaviour
             return;
         }
 
-        float y_input = Input.GetAxis("Mouse Y") + Input.GetAxis("Right Stick Y");
-        float x_input = Input.GetAxis("Mouse X") + Input.GetAxis("Right Stick X");
+        float y_input = Input.GetAxis("Mouse Y") ;
+        float x_input = Input.GetAxis("Mouse X") ;
 
         freeLookCam.m_YAxis.m_InputAxisValue = y_input;
         freeLookCam.m_XAxis.m_InputAxisValue = x_input;

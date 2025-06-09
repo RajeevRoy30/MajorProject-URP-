@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour
     public static KeyCode secondaryJoystick = KeyCode.Joystick1Button5;
 
     // Draw Sword
-    public static KeyCode drawKeyboard = KeyCode.Mouse2;
+    public static KeyCode drawKeyboard = KeyCode.G;
     public static KeyCode drawJoystick = KeyCode.Joystick1Button3;
 
     // Change camera
@@ -65,12 +65,12 @@ public class InputManager : MonoBehaviour
 
     public static bool GetPrimaryAttackInput()
     {
-        return Input.GetKeyDown(primaryKeyboard) || Input.GetKeyDown(primaryJoystick) || (Input.GetAxisRaw("JoystickTrigger") < 0 && !triggerPressed);
+        return Input.GetKeyDown(primaryKeyboard) || Input.GetKeyDown(primaryJoystick);
     }
 
     public static bool GetSecondaryAttackInput()
     {
-        return Input.GetKeyDown(secondaryKeyboard) || Input.GetKeyDown(secondaryJoystick) || (Input.GetAxisRaw("JoystickTrigger") > 0 && !triggerPressed);
+        return Input.GetKeyDown(secondaryKeyboard) || Input.GetKeyDown(secondaryJoystick);
     }
 
     public static bool GetDrawSwordInput()

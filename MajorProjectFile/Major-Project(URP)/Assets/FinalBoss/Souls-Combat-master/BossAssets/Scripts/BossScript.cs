@@ -12,7 +12,7 @@ public class BossScript : MonoBehaviour
 
     private Animator anim;
     public Transform player;
-    public GirlScript girlScript;
+    //public GirlScript girlScript;
 
     public AudioClip[] takeDamageSound;
     public BossLifeBarScript bossLifeScript;
