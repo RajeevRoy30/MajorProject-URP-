@@ -38,7 +38,7 @@ public class HealthSystem : MonoBehaviour
         animator.CrossFade("Damage",.1f);
     }
 
-    private void Die()
+    public virtual void Die()
     {
         if (animator != null)
         {
