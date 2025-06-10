@@ -1087,7 +1087,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: blah blah blah
+  m_text: "You play as a warrior who enters an old, ruined temple taken over by evil
+    Templar knights and thir Boss. As you explore, you learn the dark truth behind
+    the temple\u2019s fall. With your powerful magic axe, you must fight through
+    these enemies and finally face a mighty guardian once a noble protector, now
+    turned into a terrifying monster."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 76884ef2eac7f3e408ae81ea021725b2, type: 2}
   m_sharedMaterial: {fileID: -4544344705844917812, guid: 76884ef2eac7f3e408ae81ea021725b2,
@@ -1115,8 +1119,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90.4
-  m_fontSizeBase: 90.4
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

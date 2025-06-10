@@ -6,4 +6,8 @@ public class StorySceneManager : MonoBehaviour
     {
         SceneTransitionManager.Instance.LoadSceneWithFade("Controls");
     }
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
 }

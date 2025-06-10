@@ -6055,6 +6055,7 @@ MonoBehaviour:
   reticle: {fileID: 0}
   virtualCamera: {fileID: 0}
   impulseSource: {fileID: 0}
+  axeCollider: {fileID: 0}
 --- !u!114 &5940033188979444477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6080,6 +6081,7 @@ MonoBehaviour:
   isGrounded: 0
   walkSpeed: 2
   runSpeed: 5
+  gravity: -9.81
   groundedCheckRadius: 0.3
   groundLayers:
     serializedVersion: 2
@@ -6089,7 +6091,6 @@ MonoBehaviour:
   VerticalAnimTime: 0.2
   StartAnimTime: 0.3
   StopAnimTime: 0.15
-  mass: 0
 --- !u!114 &3043981731498020461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6119,6 +6120,7 @@ MonoBehaviour:
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls: []
+  healthImage: {fileID: 0}
 --- !u!114 &2425655194890260082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6137,6 +6139,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8388608
   attackPoint: {fileID: 5144656325168211325}
+  attackClip: {fileID: 0}
 --- !u!1 &2775102162386645457
 GameObject:
   m_ObjectHideFlags: 0
@@ -18409,15 +18412,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6db1b6119f67394a8c9ac6a9ab79c2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.29395577
+      value: -0.302
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6db1b6119f67394a8c9ac6a9ab79c2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.039037134
+      value: 0.111
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6db1b6119f67394a8c9ac6a9ab79c2a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.06716676
+      value: 0.068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6db1b6119f67394a8c9ac6a9ab79c2a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18573,6 +18576,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 0
+  audioClip: {fileID: 0}
 --- !u!23 &2944579466181460132 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2300000, guid: b6db1b6119f67394a8c9ac6a9ab79c2a,

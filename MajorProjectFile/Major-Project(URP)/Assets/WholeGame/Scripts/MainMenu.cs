@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class MainMenu : MonoBehaviour
         SceneTransitionManager.Instance.LoadSceneWithFade("Credits 1");
     }
 
+    public void OnBackButton()
+    {
+         SceneManager.LoadScene("MainMenu 1");
+    }
     public void QuitGame()
     {
 #if UNITY_EDITOR
