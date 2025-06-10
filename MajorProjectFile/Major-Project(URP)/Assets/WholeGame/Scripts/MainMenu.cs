@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    private void OnEnable()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
     public void StartGame()
     {
         SceneTransitionManager.Instance.LoadSceneWithFade("Story");

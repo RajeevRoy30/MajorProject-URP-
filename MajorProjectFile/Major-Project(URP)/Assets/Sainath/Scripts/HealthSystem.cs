@@ -29,7 +29,7 @@ public class HealthSystem : MonoBehaviour
 
         if (healthImage != null)
         {
-            healthImage.fillAmount =(float)currentHealth / 100f;
+            healthImage.fillAmount =(float)currentHealth / maxHealth;
         }
 
         if (currentHealth <= 0)

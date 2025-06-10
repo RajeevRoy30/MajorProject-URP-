@@ -41,11 +41,15 @@ public class MovementInput : MonoBehaviour
     private float verticalVel;
     private Vector3 moveVector;
 
+    public static Transform playerTransform;
+
     void Start()
     {
         anim = GetComponent<Animator>();
         cam = Camera.main;
         controller = GetComponent<CharacterController>();
+
+        if(playerTransform == null ) { playerTransform = this.transform; }
     }
 
     void Update()

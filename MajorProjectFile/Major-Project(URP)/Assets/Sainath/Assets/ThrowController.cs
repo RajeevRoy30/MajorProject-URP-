@@ -48,6 +48,8 @@ public class ThrowController : MonoBehaviour
     public CinemachineFreeLook virtualCamera;
     public CinemachineImpulseSource impulseSource;
 
+    [SerializeField] private Collider axeCollider;
+
     void Start()
     {
         Cursor.visible = false;
@@ -73,6 +75,10 @@ public class ThrowController : MonoBehaviour
             transform.eulerAngles = new Vector3(Mathf.LerpAngle(transform.eulerAngles.x, 0, .2f), transform.eulerAngles.y, transform.eulerAngles.z);
 
         // Animator states
+        if(axeCollider != null)
+        {
+             axeCollider.enabled = !hasWeapon && !aiming;
+        }
         animator.SetBool("canAttack", !hasWeapon && !aiming);
         animator.SetBool("pulling", pulling);
         walking = input.Speed > 0;

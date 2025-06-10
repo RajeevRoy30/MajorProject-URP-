@@ -7,6 +7,7 @@ public class WeaponScript : MonoBehaviour
     public bool activated;
     public float rotationSpeed;
     [SerializeField] private LayerMask layerMask;
+    [SerializeField] private AudioClip audioClip;
 
     void Update()
     {
@@ -31,6 +32,15 @@ public class WeaponScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.TryGetComponent<EnemyHealth>(out EnemyHealth component))
+        {
+            component.TakeDamage(20);
+            if(audioClip != null)
+            {
+                AudioSource.PlayClipAtPoint(audioClip,transform.position);
+            }
+        }
+
         if (other.CompareTag("Breakable"))
         {
             BreakBoxScript breakScript = other.GetComponent<BreakBoxScript>();
