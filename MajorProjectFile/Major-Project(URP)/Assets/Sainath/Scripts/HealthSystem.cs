@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class HealthSystem : MonoBehaviour
     private Animator animator;
 
     public UnityEvent OnDeathEvent;
+    [SerializeField] private Image healthImage;
 
     void Start()
     {
@@ -24,6 +26,11 @@ public class HealthSystem : MonoBehaviour
         PlayerHitAnimation();
 
         currentHealth -= damage;
+
+        if (healthImage != null)
+        {
+            healthImage.fillAmount =(float)currentHealth / 100f;
+        }
 
         if (currentHealth <= 0)
         {

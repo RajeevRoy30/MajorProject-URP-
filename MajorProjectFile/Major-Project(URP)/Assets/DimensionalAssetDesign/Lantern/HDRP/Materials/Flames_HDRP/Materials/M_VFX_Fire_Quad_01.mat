@@ -8,30 +8,26 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_VFX_Fire_Quad_01
-  m_Shader: {fileID: 4800000, guid: 520fb051ec1c2c84d9ded86a4b5b9981, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _ENABLE_FOG_ON_TRANSPARENT
-  - _SURFACE_TYPE_TRANSPARENT
+  m_Shader: {fileID: 4800000, guid: 7a7b02219c97cfa48b5182adc1238a05, type: 3}
+  m_ValidKeywords: []
   m_InvalidKeywords:
   - _ADD_PRECOMPUTED_VELOCITY
+  - _ENABLE_FOG_ON_TRANSPARENT
+  - _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap:
     MotionVector: User
-    RenderType: Transparent
   disabledShaderPasses:
   - DistortionVectors
   - TransparentBackface
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _ColorGradientMask:
-        m_Texture: {fileID: 2800000, guid: e4032b025693bfb47ae0e50da323b3b1, type: 3}
+        m_Texture: {fileID: 2800000, guid: b1f212ebadb408243930c2abe294793c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DistortionMaskTexture:
@@ -51,7 +47,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise_01_Texture:
-        m_Texture: {fileID: 2800000, guid: f1b6b10620016be45b38159cac55e09b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5301f8ff7e2edea4c86dfaf8247a1ec5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise_02_Texture:
@@ -71,7 +67,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0.3}
     - _TextureSample2:
-        m_Texture: {fileID: 2800000, guid: e4032b025693bfb47ae0e50da323b3b1, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7eb80d217035c754e91933ce42a82aec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _texcoord:
@@ -88,6 +84,7 @@ Material:
     - _BlendMode: 1
     - _CamOffSet: 0
     - _CameraOffset: 0
+    - _Cull1: 2
     - _CullMode: 2
     - _CullModeForward: 2
     - _DepthFade: 1
@@ -101,9 +98,10 @@ Material:
     - _DistortionOnly: 0
     - _DoubleSidedEnable: 0
     - _DoubleSidedNormalMode: 2
+    - _Dst1: 10
     - _DstBlend: 1
     - _Emissive: 50
-    - _EmissiveIntensity: 123
+    - _EmissiveIntensity: 13
     - _Emissive_Amount: 10
     - _EnableFogOnTransparent: 1
     - _Global_Speed: -2
@@ -124,17 +122,18 @@ Material:
     - _ReceivesSSR: 0
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
+    - _Src1: 5
     - _SrcBlend: 1
     - _StencilRef: 0
-    - _StencilRefDepth: 1
+    - _StencilRefDepth: 0
     - _StencilRefDistortionVec: 4
     - _StencilRefGBuffer: 2
-    - _StencilRefMV: 33
+    - _StencilRefMV: 32
     - _StencilWriteMask: 6
-    - _StencilWriteMaskDepth: 9
+    - _StencilWriteMaskDepth: 8
     - _StencilWriteMaskDistortionVec: 4
-    - _StencilWriteMaskGBuffer: 15
-    - _StencilWriteMaskMV: 41
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
     - _SurfaceType: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
@@ -142,16 +141,18 @@ Material:
     - _TransparentZWrite: 0
     - _UseShadowThreshold: 0
     - _WindSpeed: -2
+    - _ZTest1: 2
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 0
+    - _ZWrite1: 0
     - __dirty: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _ColorBottom: {r: 1, g: 0.5, b: 0, a: 0}
     - _ColorDown: {r: 1, g: 0.5, b: 0, a: 0}
-    - _ColorTop: {r: 1, g: 0.33333328, b: 0, a: 0}
+    - _ColorTop: {r: 1, g: 0.33333325, b: 0, a: 0}
     - _ColorUp: {r: 1, g: 0.3333333, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
